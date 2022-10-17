@@ -1,0 +1,56 @@
+{
+    "loanpool": {
+        "getUserSupplyPools": {
+            "params": [
+                {
+                    "name": "who",
+                    "type": "AccountId"
+                }
+            ],
+            "type": "Vec<RPCPoolInfo>"
+        },
+        "getPoolList": {
+            "params": [
+                {
+                    "name": "who",
+                    "type": "AccountId"
+                },
+                {
+                    "name": "offset",
+                    "type": "u64"
+                },
+                {
+                    "name": "limit",
+                    "type": "u64"
+                }
+            ],
+            "type": "Vec<RPCPoolInfo>"
+        },
+        "totalSupplyBorrowValues": {
+            "params": [],
+            "type": "RPCTotalValues"
+        },
+        "userTotalSupplyBorrowValues": {
+            "params": [
+                {
+                    "name": "who",
+                    "type": "AccountId"
+                }
+            ],
+            "type": "RPCUserTotalValues"
+        },
+        "getAccountStateInPool": {
+            "params": [
+                {
+                    "name": "pool_id",
+                    "type": "PoolId"
+                },
+                {
+                    "name": "who",
+                    "type": "AccountId"
+                }
+            ],
+            "type": "RPCAccountState"
+        }
+    }
+}

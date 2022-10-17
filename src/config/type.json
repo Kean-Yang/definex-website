@@ -1,0 +1,84 @@
+{
+    "PoolId": "u64",
+    "AssetId": "u64",
+    "PoolMetaDef": {
+        "vault_account": "AccountId",
+        "asset_id": "AssetId",
+        "min_provision_rate": "u128",
+        "max_mortgage_rate": "u128",
+        "liquidation_threshold_rate": "u128",
+        "liquidation_bonus_rate": "u128"
+    },
+    "PoolStatsDef": {
+        "total": "Compact<Balance>",
+        "last_supply_exchange_rate": "Compact<u128>",
+        "last_repay_exchange_rate": "Compact<u128>",
+        "last_blocknumber": "BlockNumber",
+        "borrowed": "Compact<Balance>"
+    },
+    "TotalValues": {
+        "supply_value": "Balance",
+        "borrowed_value": "Balance",
+        "rate_scale": "Balance"
+    },
+    "UserTotalValue": {
+        "supply_value": "Balance",
+        "borrowed_value": "Balance",
+        "rate_scale": "Balance",
+        "can_borrow_value": "Balance"
+    },
+    "Debt": {
+        "supply": "u128",
+        "collateral": "u128",
+        "loan": "u128"
+    },
+    "RPCPoolInfo": {
+        "id": "PoolId",
+        "asset_id": "AssetId",
+        "asset_balance": "String",
+        "asset_symbol": "String",
+        "asset_decimals": "u8",
+        "asset_price": "String",
+        "min_provision_rate": "String",
+        "max_mortgage_rate": "String",
+        "liquidation_threshold_rate": "String",
+        "liquidation_bonus_rate": "String",
+        "utilization_rate": "String",
+        "supply_balance": "String",
+        "collateral_balance": "String",
+        "loan_balance": "String",
+        "total_supply": "String",
+        "total_borrowed": "String",
+        "supply_apy": "String",
+        "borrow_apy": "String",
+        "supply_exchange_rate": "String",
+        "repay_exchange_rate": "String",
+        "liquidity_value": "String",
+        "price_decimals": "u8",
+        "rate_decimals": "u8"
+    },
+    "RPCTotalValues": {
+        "supply_value": "String",
+        "borrowed_value": "String"
+    },
+    "RPCUserTotalValues": {
+        "supply_value": "String",
+        "borrowed_value": "String",
+        "can_borrow_value": "String"
+    },
+    "RPCAccountState": {
+        "distribution_apy": "String",
+        "supply_apy": "String",
+        "borrow_apy": "String",
+        "supply_balance": "String",
+        "borrow_balance": "String",
+        "borrow_limit_balance": "String",
+        "withdraw_limit_balance": "String",
+        "borrow_protocol_balance": "String",
+        "asset_balance": "String",
+        "asset_decimals": "u8",
+        "value_decimals": "u8",
+        "total_borrow_value": "String",
+        "total_borrow_value_limit": "String"
+    }
+}

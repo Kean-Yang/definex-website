@@ -1,0 +1,253 @@
+@import '../../styles/variables';
+
+.page-header {
+    width: 100%;
+    padding: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    @mixin account-info-box {
+        height: 30px;
+        font-size: 12px;
+        background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+            #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+
+
+    }
+
+    .header {
+        max-width: 1140px;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+
+
+
+
+        .nav-logo {
+            height: 30px;
+            display: inline-block;
+            float: left;
+            margin: 14px 0;
+
+            @media screen and (max-width: $MobileWidth-M) {
+                height: 30px;
+                display: inline-block;
+                margin: 18px 0 12px 12px;
+                display: flex;
+                color: #1C3C78;
+
+                span {
+                    font-size: 24px;
+                }
+
+                img {
+                    width: 100px;
+                    height: 22px;
+                    cursor: pointer;
+                }
+            }
+
+            a {
+                display: flex;
+                color: #1C3C78;
+
+                span {
+                    font-size: 24px;
+                    margin: 0 8px;
+                }
+
+                img {
+                    width: 145px;
+                    height: 30px;
+                    cursor: pointer;
+
+                    @media screen and (max-width: $MobileWidth-M) {
+                        width: 145px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+        .menu-mobile {
+            display: none;
+        }
+
+
+
+        .nav-Wallet-account {
+            font-weight: normal;
+            margin: 14px 26px 14px;
+            display: inline-flex;
+            position: absolute;
+            right: 0;
+
+            @media screen and (max-width: $MobileWidth-M) {
+                margin: 14px 12px 14px 0;
+            }
+
+            a {
+                color: #1C3C78;
+            }
+
+
+            .balance {
+                color: #1C3C78;
+                padding: 0 12px 0 20px;
+                @include account-info-box;
+                margin-right: 20px;
+
+                @media screen and (max-width: $MobileWidth-M) {
+                    color: #1C3C78;
+                    padding: 0 6px 0 6px;
+                    @include account-info-box;
+                    margin-right: 8px;
+                }
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                    margin: 7px 0 7px 8px;
+                }
+
+                p {
+                    white-space: nowrap;
+                    max-width: 140px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
+                    @media screen and (max-width: $MobileWidth-M) {
+                        max-width: 94px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                }
+            }
+
+            .account {
+                color: #1C3C78;
+                padding: 0 20px;
+                @include account-info-box;
+
+                @media screen and (max-width: $MobileWidth-M) {
+                    padding: 0 6px;
+                    font-size: 12px;
+                }
+
+            }
+        }
+
+        .nav {
+            height: 52px;
+            font-style: normal;
+            width: 100%;
+            max-width: $MaxWidth;
+            position: absolute;
+            display: table;
+            margin: 0 auto;
+
+            .nav-link {
+                text-align: center;
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 58px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    padding: 0 15px;
+                    overflow: hidden;
+                    display: inline-block;
+                    color: #000000;
+
+                    p {
+                        font-weight: 600;
+                        font-size: $NavFontSize;
+                        text-align: center;
+                        letter-spacing: 0.12em;
+                    }
+                }
+
+                span {
+                    padding: 0 15px;
+                    overflow: hidden;
+                    display: inline-block;
+                    color: #1C3C78;
+                    cursor: pointer;
+
+                    p {
+                        font-weight: 600;
+                        font-size: $NavFontSize;
+                        text-align: center;
+                        letter-spacing: 0.12em;
+                    }
+                }
+
+
+                .active {
+                    p {
+                        color: #E6007A;
+                        font-weight: 700;
+                        border-bottom: 1px solid #E6007A;
+                    }
+                }
+            }
+
+            .nav-Wallet {
+                line-height: 34px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 5px;
+                padding: 0 16px;
+                color: #ffffff;
+                font-weight: normal;
+                font-size: $NavFontSize;
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 18px 26px 8px;
+                display: inline-flex;
+                cursor: pointer;
+
+                img {
+                    width: 20px;
+                    margin-right: 16px;
+                }
+
+                &:hover {
+                    background-color: white;
+                    color: #15163d;
+                }
+
+                .balance {
+                    background-color: white;
+                    color: $DarkColor;
+                }
+            }
+
+
+        }
+    }
+}
